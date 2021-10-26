@@ -1,3 +1,105 @@
+:root {
+  scroll-behavior: smooth; }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif; }
+
+.header {
+  height: 100vh; }
+
+.nav {
+  width: 100vw;
+  height: 6vh;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  position: fixed;
+  z-index: 9999;
+  background-color: #fff; }
+  .nav__img {
+    height: 100%; }
+  .nav__links {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 6vh;
+    height: 100vh;
+    width: 20%;
+    background-color: #000;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out; }
+    .nav__links--open {
+      transform: translate(0); }
+  .nav__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column; }
+  .nav__list-item {
+    transform: rotate(90deg);
+    opacity: 0; }
+    .nav__list-item > a {
+      text-decoration: none;
+      color: #fff; }
+
+.burger {
+  display: block;
+  cursor: pointer; }
+  .burger > div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 5px;
+    transition: all 0.4s ease; }
+  .burger--open .burger__line1 {
+    transform: rotate(-45deg) translate(-5px, 5px); }
+  .burger--open .burger__line2 {
+    opacity: 0; }
+  .burger--open .burger__line3 {
+    transform: rotate(45deg) translate(-5px, -5px); }
+
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+@media only screen and (min-width: 600px) {
+  .burger {
+    display: none; }
+
+  .nav__links {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    transform: translate(0);
+    height: 100%;
+    top: 0; }
+  .nav__list {
+    flex-direction: row; }
+  .nav__list-item {
+    transform: rotate(0);
+    opacity: 1; }
+    .nav__list-item > a {
+      color: #000; } }
 
 /*# sourceMappingURL=main.css.map */
