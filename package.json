@@ -1,0 +1,18 @@
+{
+  "name": "projekt-witryny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "projekt-witryny"
+  },
+  "author": "Mateusz Hladky",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.8.0"
+  }
+}
