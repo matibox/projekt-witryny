@@ -10,9 +10,34 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     overflow-x: hidden;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+@keyframes navLinkFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes in {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
 }
 
 $base-color: #505abb;

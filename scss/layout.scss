@@ -1,5 +1,9 @@
 .header {
     height: 100vh;
+
+    &__upper {
+        height: 6vh;
+    }
 }
 
 .nav {
@@ -24,7 +28,7 @@
         right: 0;
         top: 6vh;
         height: 100vh;
-        width: 20%;
+        width: 30%;
         background-color: #000;
         z-index: -1;
         transform: translateX(100%);
@@ -78,17 +82,6 @@
 
     &--open &__line3 {
         transform: rotate(45deg) translate(-5px, -5px);
-    }
-}
-
-@keyframes navLinkFadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
     }
 }
 

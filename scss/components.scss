@@ -1,0 +1,41 @@
+.hero {
+    padding-inline: 16px;
+    height: 50%;
+
+    &__title-wrapper {
+        padding-top: 25%;
+    }
+
+    &__title-dot {
+        color: $secondary-color;
+    }
+
+    &__button-wrapper {
+        margin-top: 65px;
+    }
+
+    &__button {
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 15px;
+            background-color: $base-color;
+            border-radius: 100px 0;
+            left: -10px;
+            bottom: -3px;
+            z-index: -1;
+            transition: all 0.75s ease;
+        }
+
+        &:hover::before {
+            transform: translateX(-200%);
+        }
+    }
+}
