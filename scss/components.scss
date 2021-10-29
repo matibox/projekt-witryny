@@ -10,6 +10,20 @@
         color: $secondary-color;
     }
 
+    &__subtitle-underline {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $base-color;
+        }
+    }
+
     &__button-wrapper {
         margin-top: 65px;
     }
@@ -20,6 +34,7 @@
         font-size: 24px;
         font-weight: 300;
         position: relative;
+        margin-left: 5px;
 
         &::before {
             content: '';
