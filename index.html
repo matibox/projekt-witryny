@@ -52,7 +52,7 @@
                 <h3 class="hero__subtitle">w <span class="hero__subtitle-underline">2021</span> roku</h3>
             </div>
             <div class="hero__button-wrapper">
-                <a href="#" class="hero__button">
+                <a href="#scrollTo" class="hero__button">
                     pokaż więcej
                 </a>
             </div>
@@ -61,13 +61,85 @@
             <img src="./assets/hero.jpg" alt="hero" class="header__img">
         </div>
         <div class="header__links-wrapper">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="design" id="scrollTo">
+            <h2 class="design__heading">Asymetryczność i przesunięcie</h2>
+            <article class="design__article">
+                Designerzy używający asymetrii chcą podkreślić wyjątkowość witryny. Modne strony internetowe mają wywoływać wrażenie ruchu oraz zapewniać większą różnorodność wizualną. Niestandardowe ułożenie elementów sprawia wrażenie wysokiej jakości oraz uczucia premium.
+            </article>
+            <div class="design__img-wrapper">
+                <img src="./assets/asymmetric1.png" alt="asymetryczność" class="design__img design__img--p">
+                <img src="./assets/asymmetric2.png" alt="asymetryczność" class="design__img design__img--p">
+            </div>
+        </section>
+        <section class="design">
+            <h2 class="design__heading">Ciemny motyw szablonu</h2>
+            <article class="design__article">
+                Dużo marek na skalę światową odchodzi od jasnych na rzecz ciemnych motywów. Dlaczego? Takie rozwiązanie sprawia, że strona wygląda bardziej elegancko, wszystkie elementy są doskonale widoczne. Ciemne barwy strony mniej męczą wzrok.
+            </article>
+            <div class="design__img-wrapper">
+                <img src="./assets/dark_mode1.png" alt="ciemny motyw" class="design__img design__img--o">
+                <img src="./assets/dark_mode2.png" alt="ciemny motyw" class="design__img design__img--o">
+            </div>
+        </section>
+        <section class="design">
+            <h2 class="design__heading">Odważne zestawienie kolorów</h2>
+            <article class="design__article">
+                W designie ważna jest kreatywność, dlatego w 2021 popularne są odważne zestawienia kolorów. Od razu przyciągają wzrok swą wyjątkowością. W przypadku niektórych marek intensywne kolory oraz neonowe odcienie się sprawdzają.
+            </article>
+            <div class="design__img-wrapper">
+                <img src="./assets/brightly_coloured1.png" alt="odważne zestawienie kolorów" class="design__img design__img--p">
+                <img src="./assets/brightly_coloured2.png" alt="odważne zestawienie kolorów" class="design__img design__img--p">
+            </div>
+        </section>
+        <section class="design">
+            <h2 class="design__heading">Uniwersalny minimalizm</h2>
+            <article class="design__article">
+                Doskonale znany minimalizm może wydawać się oczywistym wyborem. Większości z nas kojarzy się z białym kolorem, natomiast w 2021 roku można spotkać inne koloru tła np. beżowy, szary, a nawet czarny.
+            </article>
+            <div class="design__img-wrapper">
+                <img src="./assets/minimalistic1.png" alt="ciemny motyw" class="design__img design__img--o">
+                <img src="./assets/minimalistic2.png" alt="ciemny motyw" class="design__img design__img--o">
+            </div>
+        </section>
+        <section class="horizontal">
+            <h1 class="horizontal__heading">Horyzontalne przewijanie</h1>
+            <div class="horizontal__scroll">
+                <div class="horizontal__one">
+                    <article class="horizontal__article" id="hor-art-1">
+                        Horyzontalne przewijanie może wydawać się dziwne, ale coraz więcej designerów eksperymentuje z takim typem scrollowania. Ci, którzy robią to najlepiej obracają szablon nie ze względu na odmiennośc od innych witryn, ale jako praktyczny sposób na stopniowe ujawnianie drugorzędnych informacji, jak w galerii obrazów.
+                    </article>
+                    <article class="horizontal__article" id="hor-art-2">
+                        Projektanci, którzy z powodzeniem stosują przewijanie poziome, powinni mieć na uwadze następujące kwestie:
+                        <ul>
+                            <li>nie zmuszać użytkowników do poruszania się po treściach poziomych: umożliwić alternatywne sposoby nawigacji tj. przyciski strzałek z etykietami</li>
+                            <li>używać wizualnych wskazówek, aby wskazać, gdzie treść używa przewijania w poziomie</li>
+                            <li>zastanowić się, jakie treści sk orzystałyby na wyświetlaniu w trybie przewijania w poziomie - galeria zdjęć jest jednym z nich</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="horizontal__two">
+                    <!-- images -->
+                </div>
+                <div class="horizontal__three">
+                    <!-- text ?? -->
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <!-- scripts -->
     <script src="./js/index.js"></script>
     <script src="./js/nav.js"></script>
 </body>
