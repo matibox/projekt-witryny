@@ -148,29 +148,79 @@
 }
 
 .horizontal {
-    width: 100%;
-    height: calc(100vh - (43px + 6vh));
-    padding-inline: 16px;
+    height: calc(100vh);
+    display: flex;
+    flex-wrap: nowrap;
 
-    &__heading {
-        font-size: 54px;
-        color: $base-color;
-    }
+    &__sec {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 20px;
 
-    &__article {
-        margin-block: 25px;
-
-        & > ul {
-            padding-left: 15px;
+        & h1 {
+            font-size: 52px;
+            font-family: 'Roboto Slab';
+            font-weight: 300;
+            color: $base-color;
         }
     }
 
-    &__one {
+    &__gallery-wrapper {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        width: 100%;
+        flex-direction: column;
+        height: 70%;
+    }
+
+    &__fig {
+        margin-bottom: 15px;
+    }
+
+    &__caption {
+        transform: translateY(-150%);
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    &__img {
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__img:hover + &__caption {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.footer {
+    height: 30px;
+    width: 100vw;
+    background: linear-gradient(to right, $base-color, $secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+
+    &__links {
+        & > * {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+
+    &__copyright {
+        color: #fff;
+        font-size: 10px;
     }
 }
 

@@ -111,34 +111,81 @@
             </div>
         </section>
         <section class="horizontal">
-            <h1 class="horizontal__heading">Horyzontalne przewijanie</h1>
-            <div class="horizontal__scroll">
-                <div class="horizontal__one">
-                    <article class="horizontal__article" id="hor-art-1">
-                        Horyzontalne przewijanie może wydawać się dziwne, ale coraz więcej designerów eksperymentuje z takim typem scrollowania. Ci, którzy robią to najlepiej obracają szablon nie ze względu na odmiennośc od innych witryn, ale jako praktyczny sposób na stopniowe ujawnianie drugorzędnych informacji, jak w galerii obrazów.
-                    </article>
-                    <article class="horizontal__article" id="hor-art-2">
-                        Projektanci, którzy z powodzeniem stosują przewijanie poziome, powinni mieć na uwadze następujące kwestie:
-                        <ul>
-                            <li>nie zmuszać użytkowników do poruszania się po treściach poziomych: umożliwić alternatywne sposoby nawigacji tj. przyciski strzałek z etykietami</li>
-                            <li>używać wizualnych wskazówek, aby wskazać, gdzie treść używa przewijania w poziomie</li>
-                            <li>zastanowić się, jakie treści sk orzystałyby na wyświetlaniu w trybie przewijania w poziomie - galeria zdjęć jest jednym z nich</li>
-                        </ul>
-                    </article>
+            <div class="horizontal__sec horizontal__sec1">
+                <h1>Horyzontalne przewijanie</h1>
+                <article class="horizontal__article">
+                    Horyzontalne przewijanie może wydawać się dziwne, ale coraz więcej designerów eksperymentuje z takim typem scrollowania. Ci, którzy robią to najlepiej obracają szablon nie ze względu na odmiennośc od innych witryn, ale jako praktyczny sposób na stopniowe ujawnianie drugorzędnych informacji, jak w galerii obrazów.
+                </article>
+                <article class="horizontal__article">
+                    Projektanci, którzy z powodzeniem stosują przewijanie poziome, powinni mieć na uwadze następujące kwestie:
+                    <ul>
+                        <li>nie zmuszać użytkowników do poruszania się po treściach poziomych: umożliwić alternatywne sposoby nawigacji tj. przyciski strzałek z etykietami</li>
+                        <li>używać wizualnych wskazówek, aby wskazać, gdzie treść używa przewijania w poziomie</li>
+                        <li>zastanowić się, jakie treści skorzystałyby na wyświetlaniu w trybie przewijania w poziomie - galeria zdjęć jest jednym z nich</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="horizontal__sec horizontal__sec2">
+                <h1>Galeria zdjęć</h1>
+                <div class="horizontal__gallery-wrapper">
+                    <figure class="horizontal__fig" id="fig1">
+                        <img src="./assets/horizontal1.jpg" alt="Aston Martin Valhalla" class="horizontal__img">
+                        <figcaption class="horizontal__caption">Aston Martin Valhalla</figcaption>
+                    </figure>
+                    <figure class="horizontal__fig" id="fig2">
+                        <img src="./assets/horizontal2.jpg" alt="Aston Martin Vantage" class="horizontal__img">
+                        <figcaption class="horizontal__caption">Aston Martin Vantage</figcaption>
+                    </figure>
+                    <figure class="horizontal__fig" id="fig3">
+                        <img src="./assets/horizontal3.jpg" alt="Aston Martin Vanquish" class="horizontal__img">
+                        <figcaption class="horizontal__caption">Aston Martin Vanquish</figcaption>
+                    </figure>
                 </div>
-                <div class="horizontal__two">
-                    <!-- images -->
-                </div>
-                <div class="horizontal__three">
-                    <!-- text ?? -->
-                </div>
+            </div>
+            <div class="horizontal__sec horizontal__sec3">
+                <h2>Przewiń niżej...</h2>
+            </div>
+        </section>
+        <section class="design">
+            <h2 class="design__heading">Elementy 3D</h2>
+            <article class="design__article">
+                Trend projektowania 3D nie jest całkiem nowe, ale robi się coraz fajniejszy i fajniejszy. Ten trend w projektowaniu, w pełni wykorzystuje nowe osiągnięcia technologiczne i możliwości oprogramowania.
+            </article>
+            <div class="design__img-wrapper">
+                <img src="./assets/3d1.png" alt="elementy 3d" class="design__img design__img--p">
+                <img src="./assets/3d2.png" alt="elementy 3d" class="design__img design__img--p">
+            </div>
+        </section>
+        <section class="design">
+            <h2 class="design__heading">Pogrubiona czcionka</h2>
+            <article class="design__article">
+                Ciekawym trendem w projektowaniu stron WWW są pogrubione czcionki. Nie da się ukryć, że te czcionki chcą być widziane i nie można ich nie zobaczyć. Pokrywają większość ekranu, często występują z animacjami, co sprawia, że bardzo przyciągają uwagę.
+            </article>
+            <div class="design__img-wrapper">
+                <img src="./assets/bold1.png" alt="elementy 3d" class="design__img design__img--o">
+                <img src="./assets/bold2.png" alt="elementy 3d" class="design__img design__img--o">
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="footer__copyright">
+            <p>
+                All rights reserved &copy; 2021 Made by Mateusz Hladky
+            </p>
+        </div>
+    </footer>
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js"></script>
     <!-- scripts -->
     <script src="./js/index.js"></script>
     <script src="./js/nav.js"></script>
