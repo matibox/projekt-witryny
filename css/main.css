@@ -28,12 +28,18 @@ body {
   to {
     transform: translateX(-200%); } }
 .hero {
-  padding-inline: 16px;
+  padding-inline: clamp(16px, 6vw, 130px);
   height: 50%; }
   .hero__title-wrapper {
-    padding-top: 25%; }
+    padding-top: clamp(88px, 20vw, 188px); }
+  .hero__title {
+    font-size: clamp(64px, 15vw, 122px); }
   .hero__title-dot {
     color: #ff8d74; }
+  .hero__subtitle {
+    font-size: clamp(24px, 4.5vw, 36px); }
+  .hero__links-wrapper {
+    display: none; }
   .hero__subtitle-underline {
     position: relative; }
     .hero__subtitle-underline::before {
@@ -63,10 +69,36 @@ body {
       left: -10px;
       bottom: -3px;
       z-index: -1;
+      opacity: 1;
       transition: all 0.75s ease; }
     .hero__button:hover::before {
-      transform: translateX(-200%); }
+      transform: translateX(-200%);
+      opacity: 0; }
+  .hero__links-wrapper {
+    display: none; }
 
+@media only screen and (min-width: 600px) {
+  .hero {
+    height: 90vh;
+    background-image: url("./../assets/hero.jpg");
+    background-size: min(1117px, 75vw);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    display: flex;
+    flex-direction: column; }
+    .hero__button-wrapper {
+      margin-top: 75px; }
+    .hero__links-wrapper {
+      height: 4vh;
+      padding: 0 10px;
+      display: block;
+      margin: auto 0 max(15px, 2.5vw) 8px; }
+      .hero__links-wrapper > * {
+        font-size: 23px;
+        margin-right: 10px; }
+      .hero__links-wrapper > a {
+        color: #000;
+        text-decoration: none; } }
 .header {
   height: 100vh; }
   .header__upper {
@@ -77,13 +109,14 @@ body {
     justify-content: center;
     align-items: flex-end; }
   .header__img {
-    width: 100%;
+    max-width: 100%;
     position: relative;
     z-index: -1; }
   .header__links-wrapper {
     height: 4vh;
     padding: 0 10px;
-    margin-left: 8px; }
+    margin-left: 8px;
+    display: block; }
     .header__links-wrapper > * {
       font-size: 23px;
       margin-right: 10px; }
@@ -243,7 +276,12 @@ body {
     transform: rotate(0);
     opacity: 1; }
     .nav__list-item > a {
-      color: #000; } }
+      color: #000; }
+
+  .header__img-wrapper {
+    display: none; }
+  .header__links-wrapper {
+    display: none; } }
 h1,
 h2,
 h3,

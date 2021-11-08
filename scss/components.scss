@@ -1,13 +1,25 @@
 .hero {
-    padding-inline: 16px;
+    padding-inline: clamp(16px, 6vw, 130px);
     height: 50%;
 
     &__title-wrapper {
-        padding-top: 25%;
+        padding-top: clamp(88px, 20vw, 188px);
+    }
+
+    &__title {
+        font-size: clamp(64px, 15vw, 122px);
     }
 
     &__title-dot {
         color: $secondary-color;
+    }
+
+    &__subtitle {
+        font-size: clamp(24px, 4.5vw, 36px);
+    }
+
+    &__links-wrapper {
+        display: none;
     }
 
     &__subtitle-underline {
@@ -46,11 +58,50 @@
             left: -10px;
             bottom: -3px;
             z-index: -1;
+            opacity: 1;
             transition: all 0.75s ease;
         }
 
         &:hover::before {
             transform: translateX(-200%);
+            opacity: 0;
+        }
+    }
+
+    &__links-wrapper {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .hero {
+        height: 90vh;
+        background-image: url('./../assets/hero.jpg');
+        background-size: min(1117px, 75vw);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        display: flex;
+        flex-direction: column;
+
+        &__button-wrapper {
+            margin-top: 75px;
+        }
+
+        &__links-wrapper {
+            height: 4vh;
+            padding: 0 10px;
+            display: block;
+            margin: auto 0 max(15px, 2.5vw) 8px;
+
+            & > * {
+                font-size: 23px;
+                margin-right: 10px;
+            }
+
+            & > a {
+                color: #000;
+                text-decoration: none;
+            }
         }
     }
 }

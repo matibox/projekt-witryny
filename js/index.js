@@ -29,6 +29,7 @@ const img1 = gsap.utils.toArray('.design__img--p');
 const img2 = gsap.utils.toArray('.design__img--o');
 const tl = gsap.timeline();
 const tl2 = gsap.timeline();
+const tl3 = gsap.timeline();
 
 headings.forEach((text, i) => {
     gsap.from(text, {
@@ -134,4 +135,10 @@ tl2.fromTo(
         btnBefore,
         { width: 0 },
         { width: '70px', duration: 0.25, ease: Power3.easeOut }
-    );
+    )
+    .from('.header__link', {
+        ease: Power3.easeOut,
+        stagger: 0.5,
+        duration: 1,
+        opacity: 0,
+    });
