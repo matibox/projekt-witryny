@@ -1,8 +1,12 @@
+// Global variables
+const captions = document.querySelectorAll('.horizontal__caption');
+const images = document.querySelectorAll('.horizontal__img');
+
 // Hero scroll button handler
 const heroScroll = () => {
     const btn = document.querySelector('.hero__button');
 
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', e => {
         e.preventDefault();
         const el = e.target;
         const href = el.getAttribute('href');
@@ -17,9 +21,34 @@ const heroScroll = () => {
 
 heroScroll();
 
+// Detecting mobile device
+function detectMobile() {
+    if (window.innerWidth < 800) {
+        captions.forEach(caption => {
+            caption.classList.add('horizontal__caption--mobile');
+        });
+        images.forEach((image, i) => {
+            image.addEventListener('click', () => {
+                let cap = captions[i];
+                cap.classList.toggle('horizontal__caption--active');
+            });
+        });
+    } else {
+        captions.forEach(caption => {
+            caption.classList.remove('horizontal__caption--mobile');
+        });
+        images.forEach(image => {
+            image.classList.remove('horizontal__img--mobile');
+        });
+    }
+}
+
+window.onload = detectMobile;
+window.onresize = detectMobile;
+
 // GSAP ANIMATIONS
 
-// 1. section animations
+// 0. setup and global variables
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CSSRulePlugin);
 
@@ -31,6 +60,7 @@ const tl = gsap.timeline();
 const tl2 = gsap.timeline();
 const tl3 = gsap.timeline();
 
+// 1. section animations
 headings.forEach((text, i) => {
     gsap.from(text, {
         scrollTrigger: {

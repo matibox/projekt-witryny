@@ -217,28 +217,37 @@ body {
     flex-direction: column;
     padding: 20px; }
     .horizontal__sec h1 {
-      font-size: clamp(52px, 15vw, 144px);
+      font-size: clamp(52px, 14vw, 144px);
       font-family: 'Roboto Slab';
       font-weight: 300;
       color: #505abb; }
       .horizontal__sec h1 br {
         display: none; }
-  .horizontal__sec1__article {
-    font-size: clamp(14px, 2vw, 18px); }
+  .horizontal__sec1 > .horizontal__article {
+    font-size: clamp(14px, 1.5vw, 18px); }
+  .horizontal__sec2 {
+    justify-content: center; }
+    .horizontal__sec2 > h1 {
+      margin-bottom: 30px; }
   .horizontal__gallery-wrapper {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    height: 70%; }
+    justify-content: center;
+    align-items: space-around;
+    height: 80%;
+    flex-wrap: wrap; }
   .horizontal__fig {
-    margin-bottom: 15px; }
+    height: calc(33% - (25px + 15px)); }
   .horizontal__caption {
     transform: translateY(-150%);
     transition: all 0.3s ease;
     opacity: 0; }
+    .horizontal__caption--mobile {
+      transition: opacity 0.3s ease;
+      transform: translate(0); }
+    .horizontal__caption--active {
+      opacity: 1; }
   .horizontal__img {
-    max-width: 100%;
+    max-height: 100%;
     position: relative;
     z-index: 2; }
   .horizontal__img:hover + .horizontal__caption {
