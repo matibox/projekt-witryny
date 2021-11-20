@@ -37,9 +37,6 @@ function detectMobile() {
         captions.forEach(caption => {
             caption.classList.remove('horizontal__caption--mobile');
         });
-        images.forEach(image => {
-            image.classList.remove('horizontal__img--mobile');
-        });
     }
 }
 
