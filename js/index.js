@@ -23,7 +23,7 @@ heroScroll();
 
 // Detecting mobile device
 function detectMobile() {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 1001) {
         captions.forEach(caption => {
             caption.classList.add('horizontal__caption--mobile');
         });
