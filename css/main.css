@@ -314,7 +314,18 @@ body {
       width: 50%;
       margin-bottom: 5%; }
     .design__img-wrapper {
-      width: 40%; } }
+      width: 40%; }
+
+  .horizontal__sec2 h1 {
+    margin: calc(6vh + 15px) 0 0 0; }
+  .horizontal__gallery-wrapper {
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 100px; }
+  .horizontal__fig {
+    height: 35%; } }
 @media only screen and (min-width: 1000px) {
   .design {
     height: clamp(400px, 37vw, 658px);
