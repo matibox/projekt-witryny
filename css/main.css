@@ -256,7 +256,6 @@ body {
 
 .footer {
   height: 30px;
-  width: 100vw;
   background: linear-gradient(to right, #505abb, #ff8d74);
   display: flex;
   justify-content: space-between;
