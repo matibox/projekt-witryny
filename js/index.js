@@ -1,6 +1,12 @@
 // Global variables
 const captions = document.querySelectorAll('.horizontal__caption');
 const images = document.querySelectorAll('.horizontal__img');
+const logo = document.getElementById('logo');
+
+// Easter egg
+logo.addEventListener('dblclick', () => {
+    window.open('https://youtu.be/rTgj1HxmUbg', '_blank');
+});
 
 // Hero scroll button handler
 const heroScroll = () => {
