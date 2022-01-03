@@ -1,1 +1,2 @@
-Witryny internetowe - project by Mateusz Hladky
+# Witryny internetowe
+project by Mateusz Hladky
