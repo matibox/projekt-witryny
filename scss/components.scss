@@ -71,6 +71,15 @@
     &__links-wrapper {
         display: none;
     }
+
+    &__vector-credits {
+        position: absolute;
+        right: 2vw;
+        bottom: 2vh;
+        font-size: clamp(10px, 2vw, 12px);
+        text-decoration: none;
+        color: #000;
+    }
 }
 
 @media only screen and (min-width: 600px) {
